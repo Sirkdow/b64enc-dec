@@ -10,13 +10,18 @@ print    ("|_.__/ \___/  |_|    \___|_| |_|\___/_/ \__,_|\___|\___|")
 print    ("")
 print    ("               Developed by Sirkdow                     ")
 print    ("               (Fabrizio D'Onofrio)                     ")
+print    ("                       v1.1                             ")
 print    ("")                                                              
 
 
 def encode():
     b = raw_input("Type Something to encode: ")
     e = base64.b64encode(b)
+    print("")
+    print("Success:")
+    print("")
     print(e)
+    print("")
 
 def decode():
     b = raw_input("Type Something to decode: ")
@@ -24,10 +29,12 @@ def decode():
         d = base64.b64decode(b)
     except:
         print("Syntax Error")
+    print("")
     print(d)
 
 
 s = raw_input("Type e to encode or d to decode: ")
+print("")
        
 if s == 'e':
         encode()
@@ -35,3 +42,4 @@ elif s == 'd':
         decode()        
 else:
     print("%s is not valid. Restart." % (s))
+    print("")
